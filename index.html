@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/4995efba68.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    display: grid;
+    height: 800px;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 1fr;
+   
+   
+}
+
+ #item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+/* navabr */
+    body{
+        background-color: #292929;
+    
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+        position: relative;
+        height: 10vh;
+        padding: 10px 10px;
+    }
+    
+    .nav ul{
+        display: flex;
+        list-style: none;
+        gap: 70px;
+    }
+    
+    .nav ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        position: relative;
+        transition: 0.8s all linear;
+        padding: 5px 5px;
+        
+    }
+    .nav ul li a:hover{
+        color: #292929;
+    }
+    .nav ul li a::before{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: #ff0;
+        z-index: -1;
+    }
+    .nav ul li a:hover::before{
+        animation: ani 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes ani{
+        0%{
+            width: 0%;
+            height: 1px;
+            left: 50%;
+        }
+        50%{
+            width: 100%;
+            height: 1px;
+            left: 0;
+        }
+        100%{
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+    }
+
+    /* navbar end */
+#item2{
+width: 400px;
+background-color: #d0b4ee;
+/* background-color: rgb(184, 130, 6); */
+color: #fff;
+text-shadow: 2px 3px 4px #000000;
+}
+.box1{
+    /* background: url("IMG/b1.jfif"); */
+   
+    text-decoration: none;
+    padding: 80px 50px;
+    margin: auto;
+    text-align: center;
+}
+
+p{
+    padding: 10px 10px;
+}
+
+img{
+    width: 65%;
+    border-radius: 50%;
+    /* padding: 20px 50px; */
+    margin: auto;
+    border:  solid black;
+
+}
+
+/* btn */
+.btn{
+    display: inline-block;
+    padding: 8px 30px;
+    text-decoration: none;
+    border: #fff solid 3px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s all ease-in-out;
+}
+a.btn:hover {
+    border-color:  #ffffff ;
+    background-color: #000000;
+}
+a.btn::before {
+    position: absolute;
+    content:'';
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background-color: rgb(40, 4, 77)f;
+    z-index: -1;
+    transition: 0.10s all ease-in-out;
+    /* background-color: rgb(222, 222, 185); */
+}
+
+a.btn:hover::before {
+    left: 0;
+
+}
+#item3{
+    width: 1080px;
+    padding: 20px 20px;
+    background-color: #dad5fb;
+}
+
+#item4{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #292929;
+}  
+
+/* footer start */
+.footer{
+    display: flex;
+    background-color: #fff;
+    padding:  20px 20px;
+    
+}
+
+.social-links{
+    display: flex;
+    
+}
+
+.social-links ul {
+    display: flex;
+    justify-content: center;
+    width: 1400px;
+    height: 30px;
+    margin: 30px 30px;
+    
+}
+
+.social-item{
+    list-style: none;
+}
+
+.social-item a{
+    padding: 40px 40px;
+    font-size: 35px;
+    color: #fff;
+}
+/* footer ends */
+
+.apple{
+    display: grid;
+    row-gap: 80px;
+    column-gap: 40px;
+    height: 300px;
+    grid-template-rows: 150px  300px;
+    grid-template-columns: 1fr 1fr ;
+    /* background-color: rgb(82, 77, 77); */
+}
+/* box-2 */
+.item{
+    color: #000000;
+    text-align: center;
+ }
+
+.sub-item{
+    display: grid;
+    padding: 20px 25px;
+    font-size: large;
+    justify-self: center;
+}
+.sub-item ul{
+    padding: 30px 20px;
+}
+.sub-item ul li {
+  list-style-type: none;
+  text-align: center ;
+}
+#itemA{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1; 
+    grid-column-end: 3;
+}
+#itemB{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 200px;
+    width: 200px;
+    box-shadow: 2px 3px 5px  #373636;
+    background-color: #FFF4D2;
+    /* background-image: linear-gradient(#A9F1DF , #FFBBBB); */
+   
+}
+
+#itemC{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2; 
+    grid-column-end: 3;
+    height: 200px;
+    width: 200px;
+    box-shadow: 2px 3px 5px  #373636;
+    background-color: #FFF4D2;
+    /* background-image: linear-gradient(#A9F1DF , #FFBBBB); */
+ }
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">
+            <!-- Navbar -->
+            <header>
+                <div class="nav">
+                    <nav>
+                         <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">SERVICES</a></li>
+                         </ul>
+                    </nav>
+                </div>
+        </header>
+        </div>
+
+        <!-- box-1 -->
+        <div class="item" id="item2">
+            <div class="box1" id="bus1">
+                <img src="IMG/b3.jpg" alt="profile">
+                <p>
+                <h1>SUHANI MESHRAM</h1>
+                <h2>Frontend Developer</h2></P>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+        </div>
+
+        <!-- box-2 -->
+        <div class="item" id="item3">
+            <section class="apple">
+                 <div class="sub-item" id="itemA">
+                    <p ><h3>Hi!</h3>I am Suhani Meshram, a Computer Science Student. 
+                           <br>Pursuing my degree from Government College of 
+                             Engineering, Aurangabad. </p>
+                 </div>
+                 <div class="sub-item" id="itemB">
+                    <h1>SKILLS<hr></h1>
+                     <ul>
+                         <li>Problem Solving</li>
+                         <li>Perseverance</li>
+                         <li>Communication</li>
+                      </ul> 
+                 </div>
+                 <div class="sub-item" id="itemC">
+                    <h1>HOBBIES<hr></h1>
+                      <ul>
+                       <li>Photography</li>
+                       <li>Reading</li>
+                       <li>Travelling</li>
+                      </ul> 
+                 </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <div class="item" id="item4">
+            <footer>
+                <div class="social-links">
+                   <ul>
+                       <li class="social-item"><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></sli>
+                       <li class="social-item"><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                       <li class="social-item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                       <li class="social-item"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                       <li class="social-item"><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                   </ul>
+                 </div>
+                </footer>
+        </div>    
+    </div>
+</body>
+</html>
